@@ -16,7 +16,14 @@ namespace getInfo
                     Console.WriteLine($"OS : {Environment.OSVersion}");
                     break;
                 }
-
+                case "pwd":{
+                    Console.WriteLine($"The current directory is: {Environment.CurrentDirectory}");
+                    break;
+                }
+                case "cl":{
+                    Console.WriteLine($"Command line was: {Environment.CommandLine}");
+                    break;
+                }
             }
         }
     }
