@@ -11,7 +11,7 @@ namespace getInfo
                 return;
             }
 
-            switch (args[0]){
+            switch (args[0].ToLower()){
                 case "os":{
                     Console.WriteLine($"OS : {Environment.OSVersion}");
                     break;
@@ -22,6 +22,14 @@ namespace getInfo
                 }
                 case "cl":{
                     Console.WriteLine($"Command line was: {Environment.CommandLine}");
+                    break;
+                }
+                case "sysdir":{
+                    Console.WriteLine($"System dir: {Environment.SystemDirectory}");
+                    break;
+                }
+                case "mname":{
+                    Console.WriteLine($"Machine name: {Environment.MachineName}");
                     break;
                 }
             }
