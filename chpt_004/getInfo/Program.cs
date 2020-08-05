@@ -32,6 +32,18 @@ namespace getInfo
                     Console.WriteLine($"Machine name: {Environment.MachineName}");
                     break;
                 }
+                case "ostime":{
+                    Console.WriteLine($"System has been running for {Environment.TickCount64/1000/60f} minutes.");
+                    break;
+                }
+                case "version":{
+                    Console.WriteLine($"runtime version {Environment.Version}");
+                    break;
+                }
+                case "ws":{
+                    Console.WriteLine($"This process is using {Environment.WorkingSet:N0} bytes of memory.");
+                    break;
+                }
             }
         }
     }
