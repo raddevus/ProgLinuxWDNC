@@ -44,6 +44,21 @@ namespace getInfo
                     Console.WriteLine($"This process is using {Environment.WorkingSet:N0} bytes of memory.");
                     break;
                 }
+                case "getvar":{
+                    if (args.Length > 1){
+                        var environValue = Environment.GetEnvironmentVariable(args[1].ToUpper());
+                        if (environValue != null){
+                            Console.WriteLine($"{environValue}");
+                        }
+                        else{
+                            Console.WriteLine($"The environment does not have a definition for {args[1].ToUpper()}.");
+                        }
+                    }
+                    else{
+                        Console.WriteLine("You must provide an environment variable name that you want to retrieve.");
+                    }
+                    break;
+                }
             }
         }
     }
