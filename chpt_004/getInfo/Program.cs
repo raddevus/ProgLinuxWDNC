@@ -69,6 +69,12 @@ namespace getInfo
                     }
                     break;
                 }
+                case "getdrive":{
+                    foreach (String s in Environment.GetLogicalDrives()){
+                        Console.WriteLine($"{s}");
+                    }
+                    break;
+                }
             }
         }
     }
