@@ -59,6 +59,16 @@ namespace getInfo
                     }
                     break;
                 }
+                case "getpath":{
+                    var specFolders = Enum.GetValues(typeof(Environment.SpecialFolder));
+                    foreach (Environment.SpecialFolder s in specFolders){
+                        var folderPath = Environment.GetFolderPath(s);
+                        if (folderPath != String.Empty){
+                            Console.WriteLine($"[{s}] --> {folderPath}");
+                        }
+                    }
+                    break;
+                }
             }
         }
     }
