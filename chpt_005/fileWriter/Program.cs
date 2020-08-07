@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace fileWriter
 {
@@ -6,7 +7,7 @@ namespace fileWriter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            File.AppendAllText("test.txt","Hello World!");
         }
     }
 }
