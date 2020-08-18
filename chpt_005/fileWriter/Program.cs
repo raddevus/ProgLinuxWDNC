@@ -7,7 +7,7 @@ namespace fileWriter
     {
         static void Main(string[] args)
         {
-            File.AppendAllText("test.txt",$"{DateTime.Now} : Hello World!\n");
+            File.AppendAllText("test.txt",$"{DateTime.Now} : Hello World!{Environment.NewLine}");
         }
     }
 }
